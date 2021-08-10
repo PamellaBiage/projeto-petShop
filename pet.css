@@ -1,0 +1,94 @@
+.primeiroSlide{
+    background-color: red;
+    height: 220px;
+}
+
+.segundoSlide{
+    background-color: black;
+    height: 220px;
+}
+
+.terceiroSlide{
+    background-color: aqua;
+    height: 220px;
+}
+
+.abaixoDoCabecalho{
+    margin-top: 150px;
+}
+
+.carousel{
+    margin-left: 500px;
+    transition: .2;
+}
+
+#mapa{
+    margin-left: 350px;
+}
+
+#botaoEnviar, #cadastrarConsultas, #cadastrarBanhos, #cadastrarNovaConsulta, #cadastrarNovosBanhos{
+    background: transparent;
+    color: black;
+    border-color: #CDC0B0;
+}
+
+
+#botaoEnviar:hover, #cadastrarConsultas:hover, #cadastrarBanhos:hover, #cadastrarNovaConsulta:hover, #cadastrarNovosBanhos:hover{
+    transition: .2s;
+    background-color: #CDC0B0;
+}
+
+.botaoAgendamentoDeConsultas{
+    margin-left: 450px;
+}
+
+#enviarDuvidas{
+    width: 600px;
+    height: 150px;
+}
+
+.formEmailEsenha{
+    width: 300px;
+    margin-left: 40%;
+    border: solid 1px #CDC0B0;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 150px;
+}
+
+.formulario, #formularioBanho{
+    width: 90%;
+    margin-left: 80px;
+    padding: 15px;
+}
+
+table{
+    margin-left: 150px;
+    border: solid 1px #CDC0B0;
+}
+
+h2{
+    margin-left: 300px;
+    text-align: center;
+}
+
+#tabelaCadastro{
+    display: inline;
+}
+
+#formularioCadastro{
+    display: none;
+}
+
+.formularioDeCadastroBanho{
+    display: none;
+}
+
+a{
+    cursor: pointer;
+    color: black;
+}
+
+a:hover{
+    background-color: #CDC0B0;
+}
