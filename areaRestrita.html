@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Restrita</title>
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./pet.css">
+
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="pet.html">Home <span class="sr-only">(atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contato.html">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="login.html">Login</a>
+            </li>
+          </ul>
+          <form class="form-inline mt-2 mt-md-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </nav></br></br></br></br>
+</header>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+          <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" style="color: black;" href="areaRestrita.html">
+                    <span data-feather="home"></span>
+                    Início<span class="sr-only">(atual)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" onclick="mostrarFormularioConsulta()">
+                      <span data-feather="home"></span>
+                      Marcar Consulta<span class="sr-only">(atual)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" onclick="mostrarFormularioBanho()">
+                      <span data-feather="home"></span>
+                      Banho e Tosa<span class="sr-only">(atual)</span>
+                    </a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+
+
+    <main>
+
+
+        <div id="tabelaCadastro">
+        
+            <table class="table table-hover" id="tabelaCad">
+                <thead>
+                <tr class="paciente">
+                    <h2> Marcação de Consultas:</h2></br>
+                    <th scope="col">Código</th>
+                    <th scope="col" id="nome">Nome</th>
+                    <th scope="col" id="nomeDoPet">Nome do Pet</th>
+                    <th scope="col" id="veterinario">Veterinário</th>
+                    <th scope="col" id="data">Data e Hora</th>
+                    <th scope="col" id="servicos">Serviço</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="paciente">
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>João</td>
+                    <td>17/05/2021 16:45</td>
+                    <td>Nova Consulta</td>
+
+                </tr>
+                </tbody>
+            
+          </table>
+     
+         
+          <div>
+    
+            <button id="cadastrarConsultas" type="button" onclick="mostrarFormularioConsulta()" class="btn btn-primary btn-lg botaoAgendamentoDeConsultas"> Agendar Consulta <img src="./imagens/patinha2.png" style="width: 30px; height: 30px;"> </button>
+     
+          </div>  </br></br></br>
+
+        </div> 
+
+
+        <div id="tabelaCadastroBanho">
+
+        
+          <table class="table table-hover" id="tableBanho">
+            <thead>
+              <tr>
+                <h2> Marcação de Banho e Tosa:</h2></br>
+                <th scope="col">Código</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Nome do Pet</th>
+                <th scope="col">Groomer</th>
+                <th scope="col">Data e Hora</th>
+                <th scope="col">Serviço</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>Maria</td>
+                <td>17/05/2021 17:45</td>
+                <td>Tosa</td>
+                
+              </tr>
+
+              <tr>
+                <th scope="row">2</th>
+                <td>Mario</td>
+                <td>Liza</td>
+                <td>Juliano</td>
+                <td>15/06/2021 12:45</td>
+                <td>Banho e Tosa</td>
+                
+              </tr>
+            </tbody>
+          </table>
+
+          <div>
+    
+            <button id="cadastrarBanhos" onclick="mostrarFormularioBanho()" type="button" class="btn btn-primary btn-lg botaoAgendamentoDeConsultas"> Agendar Banho <img src="./imagens/patinha2.png" style="width: 30px; height: 30px;"> </button>
+     
+          </div>  
+
+        </div>  
+          
+        <div  id="formularioCadastro">
+
+          
+            <form class="formulario formularioDeCadastro">
+                <h3>Consultas</h3>
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputNomeResponsavel">Nome</label>
+                    <input type="text"class="form-control" id="inputNomeDoResponsavel" name="txtResponsavel" placeholder="Nome do Responsável">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="nomePet">Nome do Pet</label>
+                    <input type="text" class="form-control" id="inputNomeDoPet" name="txtPet" placeholder="Nome do Pet">
+                </div>
+                </div>
+                <div class="form-group">
+                <label for="inputNome">Veterinário</label>
+                <input type="text" class="form-control" id="inputVeterinario" name="txtVet" placeholder="Dr(a)">
+                </div>
+
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Data e Hora</label>
+                    <input type="datetime-local" class="form-control" name="txtData" id="inputCity">
+                </div>
+                </div> </br>
+
+                
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Serviços</label>
+                    </div>
+                    <select class="custom-select" name="txtServicos" id="inputGroupSelect01">
+                    <option selected>Selecione...</option>
+                    <option value="Nova Consulta">Nova Consulta</option>
+                    <option value="Retorno">Retorno</option>
+                    <option value="Exames">Exames</option>
+                    </select>
+                </div></br>
+                
+                <div>
+        
+                <button id="cadastrarNovaConsulta" onclick="cadastrarNome(txtResponsavel.value,txtPet.value,txtVet.value,txtData.value, txtServicos.value), mostrarCadastro()" type="button" class="btn btn-primary btn-lg">Agendar Nova Consulta <img src="./imagens/patinha2.png" style="width: 30px; height: 30px;"> </button>
+        
+                </div>    
+        
+            </form></br></br></br>
+
+        </div>
+
+
+
+    <div id="formularioBanho">
+
+        
+        <form class="formulario formularioDeCadastroBanho">
+            <h3>Banho e Tosa</h3>
+           
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputNomeResponsavel">Nome</label>
+                        <input type="text" class="form-control" name="txtBanhoNome" id="inputNomeDoGroomer" placeholder="Nome do Responsável">
+                 </div>
+
+                <div class="form-group col-md-6">
+                     <label for="nomePet">Nome do Pet</label>
+                        <input type="text" class="form-control" name="txtBanhoPet" id="inputNomeDoPet" placeholder="Nome do Pet">
+                 </div>
+            
+            </div>
+
+            <div class="form-group">
+                <label for="inputNome">Groomer</label>
+                    <input type="text" class="form-control" name="txtBanhoGroomer" id="inputNome" placeholder="Groomer">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                     <label for="inputCity">Data e Hora</label>
+                        <input type="datetime-local" name="txtBanhoData" class="form-control" id="inputCity">
+                 </div>
+            </div> </br>
+
+            
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                     <label class="input-group-text" for="inputGroupSelect01">Serviços</label>
+                </div>
+                     <select class="custom-select" name="txtBanhoServicos" id="inputGroupSelect01">
+                        <option selected>Selecione...</option>
+                        <option value="Banho">Banho</option>
+                        <option value="Tosa">Tosa</option>
+                        <option value="Banho e Tosa">Banho e Tosa</option>
+                     </select>
+                
+                </div></br>
+            
+            <div>
+    
+            <button id="cadastrarNovosBanhos" onclick="cadastrarBanhos(txtBanhoNome.value, txtBanhoPet.value, txtBanhoGroomer.value,txtBanhoData.value, txtBanhoServicos.value), mostrarCadastroBanho() " type="button" class="btn btn-primary btn-lg">Enviar <img src="./imagens/patinha2.png" style="width: 30px; height: 30px;"> </button>
+    
+            </div>    
+    
+        </form></br></br></br>
+
+    </div>
+    <script>
+    function mostrarFormularioConsulta(){
+            
+        var tabelaCadastro = document.getElementById("tabelaCadastro");
+        tabelaCadastro.style.display = "none";
+        var tabelaBanho = document.getElementById("tabelaCadastroBanho");
+        tabelaBanho.style.display = "none";
+        var formularioBanho = document.querySelector(".formularioDeCadastroBanho");
+        formularioBanho.style.display = "none";
+        var formularioCadastro = document.getElementById("formularioCadastro");
+        formularioCadastro.style.display = "inline";
+    }
+
+    function mostrarFormularioBanho(){
+        var tabelaCadastro = document.getElementById("tabelaCadastro");
+        tabelaCadastro.style.display = "none";
+        var tabelaBanho = document.getElementById("tabelaCadastroBanho");
+        tabelaBanho.style.display = "none";
+        var formularioCadastro = document.getElementById("formularioCadastro");
+        formularioCadastro.style.display = "none";
+        var formularioBanho = document.querySelector(".formularioDeCadastroBanho");
+        formularioBanho.style.display = "inline";
+    }
+
+
+    function mostrarCadastro(){
+        var tabelaCadastro = document.getElementById("tabelaCadastro");
+        tabelaCadastro.style.display = "inline";
+        var tabelaBanho = document.getElementById("tabelaCadastroBanho");
+        tabelaBanho.style.display = "none";
+        var formularioCadastro = document.getElementById("formularioCadastro");
+        formularioCadastro.style.display = "none";
+        var formularioBanho = document.querySelector(".formularioDeCadastroBanho");
+        formularioBanho.style.display = "none";
+    }
+
+    function mostrarCadastroBanho(){
+        var tabelaCadastro = document.getElementById("tabelaCadastro");
+        tabelaCadastro.style.display = "none";
+        var tabelaBanho = document.getElementById("tabelaCadastroBanho");
+        tabelaBanho.style.display = "inline";
+        var formularioCadastro = document.getElementById("formularioCadastro");
+        formularioCadastro.style.display = "none";
+        var formularioBanho = document.querySelector(".formularioDeCadastroBanho");
+        formularioBanho.style.display = "none";
+    }
+
+
+    </script>
+
+</body>
+
+<script src="pet.js"></script>    
+
+</html>
